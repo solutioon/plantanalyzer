@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant analyzer</title>
+    <style>
+        .green-line {
+            border-bottom: 2px solid green;
+            margin-bottom: 20px;
+        }
+        .logo {
+            float: left;
+            width: 80px;
+            height: 80px;
+        }
+        /* Estilos para los botones */
+        button, .custom-file-upload {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover, .custom-file-upload:hover {
+            background-color: darkgreen; /* Cambia el color al pasar el cursor sobre el botón */
+        }
+        /* Estilos adicionales para dispositivos móviles */
+        @media only screen and (max-width: 600px) {
+            button, .custom-file-upload {
+                width: 100%; /* Botón ocupa todo el ancho en dispositivos móviles */
+            }
+        }
+        /* Estilos para la vista previa de la imagen subida */
+        #upload-preview {
+            max-width: 80%; /* Limita el ancho máximo al 80% de la pantalla */
+            height: auto; /* Esto mantendrá la relación de aspecto */
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="Logo" class="logo">
+    <br>
+    <h1>Plant analyzer</h1>
+    <div class="green-line"></div>
+    <form id="upload-form">
+        <label for="upload-input" class="custom-file-upload">Select file</label>
+        <br>
+        <input type="file" id="upload-input" accept="image/*" required style="display:none;">
+        <br>
+        <button type="submit">Analize Plant</button>
+        <br> 
+        <br>
+        <img id="upload-preview" class="hidden" alt="Preview view of image">
+    </form>
+    <div id="response-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
