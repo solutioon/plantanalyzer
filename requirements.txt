@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+python-multipart  # For handling file uploads
+google-generativeai==0.7.2
+requests  # Might be needed for interacting with Google Generative AI
+google-auth  # Might be needed for authentication with Google Generative AI
+google-auth-oauthlib  # Might be needed for authentication with Google Generative AI
